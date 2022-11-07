@@ -1,0 +1,15 @@
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+.search h1 {
+    color: black;
+    
+}
+
+input {
+    padding: 10px 10px;
+}

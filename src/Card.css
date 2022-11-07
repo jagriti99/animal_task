@@ -1,20 +1,70 @@
-.styleCard {
-    border-radius: 8px;
-    box-shadow: 0px 0px 8px rgb(231, 115, 115);
-    color: #6fa7eb;
-    display:flex;
-    justify-content: space-between;
-  }
-  h2{
-    color:blueviolet;
-  }
-  .likes{
-    color:red;
-  }
-.styleImage {
-    margin-top:10px;
-    max-height: 200px;
-    overflow: hidden;
-  }
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+ .cards{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 230px;
+  height: 270px;
+  margin: 1rem;
+  background: linear-gradient(145deg, #f0f0f0, #cacacaa0);
+  box-shadow: 10px 10px 10px #949292;
   
+
+ }
+ .card{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  /* flex:0 0 200px; */
+  margin:10px;
+  
+  
+  
+ }
+.image{
+  display: flex;
+    justify-items: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+img {
+  max-width: 100%;
+  height: 100%;
+}
+
+ 
+  .remove{
+    position: absolute;
+    display: flex;
+    text-transform: bold;
+    text-align: center;
+    color: black;
+    padding: 5px;
+    border-radius: 40px;
+    top: 0;
+    right: 4px;
+    cursor: pointer;
+  }
+
+  .btn{
+    width: 70px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+   
+    position: relative;
+    
+    border-radius: 5px;
+    border: none;
+    margin-left: 10px;
+    
+  }
  

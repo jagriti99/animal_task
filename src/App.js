@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Card from "./Card";
 import { animals } from "./animals";
 import "./Card.css";
+import "./Search.css";
+import "./Main.css";
 class App extends Component {
   state = {
     animals: animals,
@@ -20,6 +22,21 @@ class App extends Component {
       const updatedArray = state.animals.map((animal) => {
         if (animal.name === name) {
           return { ...animal, likes: animal.likes + 1 };
+        } else {
+          return animal;
+        }
+      });
+      return {
+        animals: updatedArray,
+      };
+    });
+  };
+
+  removeLikesHandler = (name) => {
+    this.setState((state) => {
+      const updatedArray = state.animals.map((animal) => {
+        if (animal.name === name) {
+          return { ...animal, likes: animal.likes - 1 };
         } else {
           return animal;
         }
@@ -51,15 +68,22 @@ class App extends Component {
           likes={animal.likes}
           removeCard={() => this.removeHandler(animal.name)}
           addLikes={() => this.addLikesHandler(animal.name)}
+          removeLikes={() => this.removeLikesHandler(animal.name)}
         />
       );
     });
 
     return (
-      <div>
-        <h1>{this.state.animals.length}Animals</h1>
-        <input type="text" onChange={this.searchHandler}></input>
-        <div className="animalList">{animalsList}</div>
+      <div className="outer-container">
+        <div className="search">
+          <h1>{this.state.animals.length}Animals</h1>
+          <input
+            type="text"
+            placeholder="Search"
+            onChange={this.searchHandler}
+          ></input>
+        </div>
+        <main className="container">{animalsList}</main>
       </div>
     );
   }
