@@ -1,0 +1,20 @@
+.styleCard {
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px rgb(231, 115, 115);
+    color: #6fa7eb;
+    display:flex;
+    justify-content: space-between;
+  }
+  h2{
+    color:blueviolet;
+  }
+  .likes{
+    color:red;
+  }
+.styleImage {
+    margin-top:10px;
+    max-height: 200px;
+    overflow: hidden;
+  }
+  
+ 
